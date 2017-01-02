@@ -123,7 +123,7 @@ class Container extends React.Component {
 		super(props);
 		// data for introduction to app
 		// for new users
-		const intoData = [
+		const introData = [
 			{
 				id: -3, 
 				value: "Hi! This is a simple todo list app made by REACT <3"
@@ -138,8 +138,10 @@ class Container extends React.Component {
 			}
 		];
 		
+		const localData = localStorage.todos && JSON.parse(localStorage.todos);
+
 		this.state = { 
-			data: JSON.parse(localStorage.todos) || introData
+			data: localData || introData
 		};
 		
 		// binding methods

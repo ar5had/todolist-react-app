@@ -173,7 +173,7 @@ var Container = function (_React$Component2) {
 
 		var _this3 = _possibleConstructorReturn(this, _React$Component2.call(this, props));
 
-		var intoData = [{
+		var introData = [{
 			id: -3,
 			value: "Hi! This is a simple todo list app made by REACT <3"
 		}, {
@@ -184,8 +184,10 @@ var Container = function (_React$Component2) {
 			value: "Add new todos and come back any time later, I will save them for you!"
 		}];
 
+		var localData = localStorage.todos && JSON.parse(localStorage.todos);
+
 		_this3.state = {
-			data: JSON.parse(localStorage.todos) || introData
+			data: localData || introData
 		};
 
 		// binding methods
